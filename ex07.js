@@ -11,7 +11,7 @@
     et nous attendons comme résultat 15;
 */
 
-boostedAddition([4, 5, 6]);
+console.log(boostedAddition([4, 5, 6]));
 
 /*      Test 1
     Appel à la fonction "boostedAddition",
@@ -19,6 +19,13 @@ boostedAddition([4, 5, 6]);
     et nous attendons comme résultat 44;
 */
 
-boostedAddition([4, 4, 6, 8, 10, 12]);
+console.log(boostedAddition([4, 4, 6, 8, 10, 12]));
 
 //  écrire votre code sous ce commentaire
+function boostedAddition(array) {
+	var sum = 0;
+	for(let i of array) {
+		sum += i;
+	}
+	return sum;
+}
