@@ -19,7 +19,7 @@
     et nous attendons comme résultat 0;
 */
 
-isAllEven([4, 5, 6]);
+console.log(isAllEven([4, 5, 6]));
 
 /*      Test 1
     Appel à la fonction "isAllEven",
@@ -27,7 +27,21 @@ isAllEven([4, 5, 6]);
     et nous attendons comme résultat 1;
 */
 
-isAllEven([4, 4, 6, 8, 10, 12]);
+console.log(isAllEven([4, 4, 6, 8, 10, 12]));
 
 //  écrire votre code sous ce commentaire
+//  c'est malin en php il aurait suffit de mettre un require() !! ;)
 
+function isEven(nb) {
+    return (1-nb%2);
+}
+
+function isAllEven(array) {
+    var answer = 1;
+    for (let i of array) {
+        if(!isEven(i)) {
+            answer = 0;
+        }
+    }
+    return answer;
+}
