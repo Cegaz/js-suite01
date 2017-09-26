@@ -24,3 +24,5 @@ retParam(5);
 function retParam(nb) {
 	return nb;
 }
+
+console.log(retParam(12));
