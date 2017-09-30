@@ -36,12 +36,28 @@
 
 */
 
-shoppingList([
+console.log(shoppingList([
     ["orange", "orange", "kiwi", "ananas"],
     ["kiwi", "ananas", "banane", "prune"],
     ["orange", "orange", "orange", "orange"],
     ["orange", "orange", "kiwi", "kiwi"],
     ["prune", "banane", "pamplemousse", "ananas"]
-]);
+]));
 
 //  écrire votre code sous ce commentaire
+
+function shoppingList(array) {
+    let list = new Array();
+
+    for (var i of array) {
+    	for (var j of i) {
+    		if(typeof list[j] === 'undefined') {
+    			list[j] = 1;
+    		} else {
+    			list[j] +=1;
+    		}
+    	}
+    }
+
+    return list;
+}
